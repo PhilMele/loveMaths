@@ -1,0 +1,80 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+  
+
+
+
+/* General */
+
+body {
+    background-color: #EEEEDF;
+    font-family: "JetBrains Mono", monospace;
+    color: #394063;
+}
+
+.company-name{
+    font-family: "Permanent Marker", cursive;
+    font-size: 14px;
+
+}
+
+p{
+    font-size: small;
+    }
+
+
+/* Navbar */
+
+/* Header */
+
+/* Footer */
+
+.footer{
+    text-align: center;
+}
+
+.footer .footer-text{
+    color: rgb(57, 64, 99, 0.6);
+}
+
+
+.social-icons{
+    pass
+}
+
+.social-icons .black-social{
+    color:black;
+}
+
+.line-middle{
+    pass
+}
+/* Index Page */
+
+.index-main{
+    text-align: center;
+
+}
+
+.index-main .index-main-audience{
+    padding: 20px 0 20px 0;
+}
+
+.tell-us-main{
+    text-align:left;
+
+}
+
+/* Local Businesses Page */
+
+/* Public Sector Page */
+
+/* Media Queries */
+
+@media only screen and (max-width: 387px) {
+    .index-main-audience img {
+      max-width: 100%;
+      height: auto;
+    }
+  }

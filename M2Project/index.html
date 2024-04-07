@@ -13,6 +13,8 @@
     <!--CSS-->
     <link rel="stylesheet" href="assets/styles.css">
 
+
+
     <!-- Favicon -->
 
 </head>
@@ -21,34 +23,36 @@
 <div class="first-screen-div">
     <div class="container blurred-square">
         <div class="row">
-        <h1>Start you adventure.</h1>
+            <h1>Start you adventure.</h1>
         </div>
         <div class="row">
 
-    <!--Hero Name Input-->
-    <form method="GET" action="" class="">
+        <!--Hero Name Input-->
+            <form method="GET" action="" class="" id="hero-form">
 
-        <label for="fname">Choose Your Hero Name</label><br>  
-        <input type="text" id="fname" name="fname" placeholder="" class="" required><br><br> 
-
-        <label for="customer-type">Select Your Avatar</label><br>
-            <select id="customer-type" class="width-control-form" name="customer-type" required>
-                <option disabled="" selected="" value="">Select Option</option>
-                <option value="user">Avatar Image 1</option>
-                <option value="local-business">Avatar Image 2</option>
-            </select><br><br> 
-        <button class="" type="submit">Let's begin!</button>
-    </form>
+                <label for="hero-name">Choose Your Hero Name</label><br>  
+                <input type="text" id="hero-name" name="hero-name" placeholder="" class="" required><br><br> 
+        <!-- Hero Avatar Selection -->
+                <label for="avatar-type">Select Your Avatar</label><br>
+                <select id="avatar-type" class="" name="avatar-type" required>
+                    <option disabled="" selected="" value="">Select Option</option>
+                    <option value="avatar-1">Avatar Image 1</option>
+                    <option value="avatar-2">Avatar Image 2</option>
+                </select><br><br> 
+                <button class="" type="submit">Let's begin!</button>
+            </form>
+        </div>
     </div>
-
-    <!-- Hero Avatar Selection -->
-
-
 </div>
 <!--Second Screen-->
 
 <!--Third Screen-->
 
+<!-- Javascript -->
+<script src="assets/index.js"></script>
 
+<script>
+
+</script>
 </body>
 </html>

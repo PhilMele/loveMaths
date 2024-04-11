@@ -18,6 +18,15 @@ document.addEventListener("DOMContentLoaded", function(){
             
             })
         }
+        //when users pressses enter it submits the userAnswer input
+        document.getElementById('answer-box').addEventListener("keydown", function(event){
+            if (event.key === "Enter"){
+                //if enter is pressed, then activate checkAnswer function
+                checkAnswer()
+            }
+
+        })
+
         //looks for game-type addition to 
         //start this action
         runGame("addition");
@@ -31,6 +40,10 @@ document.addEventListener("DOMContentLoaded", function(){
     *and after the user's answer has been processed
  */
 function runGame(gameType){
+    //reset userAnswer input at the benning of each game
+    document.getElementById('answer-box').value = "";
+    document.getElementById('answer-box').focus();
+
     //generate random numbers
     let num1 = Math.floor(Math.random()*25 +1);
     let num2 = Math.floor(Math.random()*25 +1);

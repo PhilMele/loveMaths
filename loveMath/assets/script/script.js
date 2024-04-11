@@ -55,8 +55,10 @@ function checkAnswer(){
 
     if (isCorrect){
         alert ("Nice")
+        incrementScore()
     }else{
         alert(`You are an idiot. The answer is ${calculatedAnswer[0]}. Your answer is ${userAnswer}. That's not the same.`)
+        incrementWrongAnswer()
     }
 
     runGame(calculatedAnswer[1]);
@@ -85,9 +87,24 @@ function calculateCorrectAnswer(){
 
 }
 
-function incrementScore(){}
 
-function incrementWrongAnswer(){}
+/**
+*Gets current score  from DOM and increment it by 1
+*/
+function incrementScore(){
+
+    let oldScore= parseInt(document.getElementById('score').innerText)
+    document.getElementById('score').innerText = ++oldScore
+
+}
+
+/**
+*Gets current tally of incorrect answers  from DOM and increment it by 1
+*/
+function incrementWrongAnswer(){
+    let oldScore= parseInt(document.getElementById('incorrect').innerText)
+    document.getElementById('incorrect').innerText = ++oldScore
+}
 
 function displayAdditionQuestion(operand1, operand2){
     document.getElementById('operand1').textContent = operand1;

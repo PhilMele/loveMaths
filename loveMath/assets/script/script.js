@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(){
         for (let button of buttons){
             button.addEventListener("click", function(){
                 if (this.getAttribute("data-type") === "submit"){
-                    alert("You clicked submit!")
+                    checkAnswer();
                 }else{
                     let gameType = this.getAttribute("data-type");
                     //when a data-type button is click that is not submit
@@ -41,10 +41,49 @@ function runGame(gameType){
 
 }
 
+/***
+ *Check the answer against the first element in 
+ * the returned calculatedCorrectAnswer array
+ */
+function checkAnswer(){
+    let userAnswer = parseInt(document.getElementById('answer-box').value)
+    let calculatedAnswer = calculateCorrectAnswer()
+    let isCorrect = userAnswer === calculatedAnswer[0]
+    console.log(userAnswer)
+    console.log(calculatedAnswer)
+    console.log(isCorrect)
 
-function checkAnswer(){}
+    if (isCorrect){
+        alert ("Nice")
+    }else{
+        alert(`You are an idiot. The answer is ${calculatedAnswer[0]}. Your answer is ${userAnswer}. That's not the same.`)
+    }
 
-function calculateCorrectAnswer(){}
+    runGame(calculatedAnswer[1]);
+}
+/**
+ *  let operand1=parseInt(document.getElementById('operand1').innerText);
+ *   let operand2=parseInt(document.getElementById('operand2').innerText);
+  *  let operator=document.getElementById(operator).innerText;
+*/
+
+/**
+    *Gets the operands (the numbers) and the operator (plus, minus, etc..)
+    *directly from the dom, and return the correct answer.
+*/
+function calculateCorrectAnswer(){
+    let operand1=parseInt(document.getElementById('operand1').innerText);
+    let operand2=parseInt(document.getElementById('operand2').innerText);
+    let operator = document.getElementById("operator").innerText;
+
+    if (operator === "+"){
+        return [operand1 + operand2, "addition"]
+    }else{
+        alert(`Unimplemented operator ${operator}`)
+        throw (`Unimplement operator: ${operator}. Aborting.`)
+    }
+
+}
 
 function incrementScore(){}
 
